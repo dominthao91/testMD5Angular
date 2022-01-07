@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 20px">
+            <mat-card style="margin: 50px 0">
+                <form class="create-product" #f="ngForm" (ngSubmit)="f.form.valid&&createBook()" novalidate>
+                    <mat-form-field style="width: 400px" appearance="outline">
+                        <label>Tên sách : </label>
+                        <input class="form-control" placeholder="Nhập tên sách" type="text" [(ngModel)]="book.title" name="title" />
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field style="width: 400px" appearance="outline">
+                        <label>Tác giả : </label>
+                        <input class="form-control" placeholder="Nhập tên tác giả" type="text" [(ngModel)]="book.author" name="author" />
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field style="width: 400px" appearance="outline">
+                        <label>Mô tả</label>
+                        <input class="form-control" placeholder="Nhập mô tả" type="text" [(ngModel)]="book.description" name="description" />
+                    </mat-form-field>
+                    <br>
+                    <div style="text-align: center; margin: 30px 0 0 0">
+                        <button style="margin-right: 30px; min-width: 120px" class="btn btn-secondary">Quay lại</button>
+                        <button style="min-width: 120px" class="btn btn-primary">Thêm mới</button>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

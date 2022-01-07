@@ -1,0 +1,26 @@
+<br>
+<br><br>
+<div style="margin: 0 0 20px 0">
+    <a  style="min-width: 120px" class="btn btn-primary" routerLink="/">Trang chủ</a>
+</div>
+<div>
+    <h3 style="text-align: center">Sửa nội dung sách</h3>
+    <form class="create-product" #f="ngForm" (ngSubmit)="f.form.valid&&updateBook()" novalidate>
+        <div>
+            <label>Tên sách : </label>
+            <input class="form-control" type="text" [(ngModel)]="book.title" name="title" />
+        </div>
+        <div>
+            <label>Tác giả : </label>
+            <input class="form-control" type="text" [(ngModel)]="book.author" name="author" />
+        </div>
+        <div>
+            <label>Mô tả</label>
+            <input class="form-control" type="text" [(ngModel)]="book.description" name="description" />
+        </div>
+        <div style="margin: 20px 0 0 0; text-align: center">
+            <button style="min-width: 120px; margin-right: 30px" class="btn btn-secondary">Quay lại</button>
+            <button style="min-width: 120px" class="btn btn-primary">Sửa</button>
+        </div>
+    </form>
+</div>

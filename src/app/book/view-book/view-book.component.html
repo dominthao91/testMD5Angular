@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 20px">
+            <mat-card style="margin: 50px 0">
+                <div>
+                    <button style="min-width: 120px" class="btn btn-primary" routerLink="list">List Book</button>
+                    <h2 style="text-align: center">Xem chi tiết sách</h2>
+                    <div>
+                        <label>Tên sách:</label>
+                        <p>{{book.title}}</p>
+                    </div>
+                    <div>
+                        <label>Tác giả:</label>
+                        <p>{{book.author}}</p>
+                    </div>
+                    <div>
+                        <label>Mô tả:</label>
+                        <p>{{book.description}}</p>
+                    </div>
+                    <div style="text-align: center">
+                        <button style="min-width: 120px" class="btn btn-secondary" routerLink="/">Quay lại</button>
+                        <button style="min-width: 120px; margin: 0 30px 0 30px" class="btn btn-danger" routerLink="/delete/{{book.id}}">Xóa</button>
+                        <button style="min-width: 120px" class="btn btn-warning" routerLink="/edit/{{book.id}}">Sửa</button>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

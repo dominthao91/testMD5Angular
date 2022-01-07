@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" style="margin-top: 20px">
+            <mat-card style="margin: 50px 0">
+                <h3>DANH SÁCH CUỐN SÁCH</h3>
+                <div>
+                    <div><a  style="min-width: 120px"  class="btn btn-primary" routerLink="/create">Thêm mới</a></div>
+                    <h3>Có {{books.length}} cuốn sách</h3>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tên sách</th>
+                            <th scope="col">Tác giả</th>
+                            <th scope="col">Mô tả</th>
+                            <th scope="col">Xóa</th>
+                            <th scope="col">Sửa</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let book of books, index as i">
+                            <th scope="row">{{i + 1}}</th>
+                            <td><a routerLink="/view/{{book.id}}">{{book.title}}</a></td>
+                            <td>{{book.author}}</td>
+                            <td>{{book.description}}</td>
+                            <td>
+                                <button  style="min-width: 120px"  class="btn btn-danger" routerLink="/delete/{{book.id}}">Xóa</button>
+                            </td>
+                            <td>
+                                <button  style="min-width: 120px"  class="btn btn-warning" routerLink="/edit/{{book.id}}">Sửa</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
